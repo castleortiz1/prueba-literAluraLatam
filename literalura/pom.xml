@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<!-- Versión del modelo de POM -->
+	<modelVersion>4.0.0</modelVersion>
+
+	<!-- Configuración del padre del proyecto -->
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>3.4.0</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+
+	<!-- Información del proyecto -->
+	<groupId>com.alura</groupId>
+	<artifactId>literalura</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>literalura</name>
+	<description>Demo project for Spring Boot</description>
+	<url/>
+
+	<!-- Licencias del proyecto -->
+	<licenses>
+		<license/>
+	</licenses>
+
+	<!-- Desarrolladores del proyecto -->
+	<developers>
+		<developer/>
+	</developers>
+
+	<!-- Sistema de control de versiones -->
+	<scm>
+		<connection/>
+		<developerConnection/>
+		<tag/>
+		<url/>
+	</scm>
+
+	<!-- Propiedades del proyecto -->
+	<properties>
+		<java.version>17</java.version>
+	</properties>
+
+	<!-- Dependencias del proyecto -->
+	<dependencies>
+		<!-- Dependencia de Spring Boot Starter Data JPA -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+
+		<!-- Dependencia de PostgreSQL Driver -->
+		<dependency>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+
+		<!-- Dependencia de Spring Boot Starter Test -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- Dependencia de Jackson Databind -->
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>2.18.2</version>
+		</dependency>
+
+		<!-- Dependencia de Jakarta Validation API -->
+		<dependency>
+			<groupId>jakarta.validation</groupId>
+			<artifactId>jakarta.validation-api</artifactId>
+			<version>3.1.0</version>
+		</dependency>
+
+		<!-- Dependencia de Spring Boot DevTools -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<version>3.4.0</version>
+		</dependency>
+	</dependencies>
+
+	<!-- Configuración de construcción -->
+	<build>
+		<plugins>
+			<!-- Plugin de Spring Boot Maven -->
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>

@@ -1,0 +1,54 @@
+<!-- src/main/resources/logback-spring.xml -->
+<configuration>
+    <!-- Definición del appender STDOUT para salida a la consola -->
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <!-- Patrón de formato para los mensajes de log -->
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} - %msg%n</pattern>
+            <!-- %d{yyyy-MM-dd HH:mm:ss}: fecha y hora del log -->
+            <!-- %msg: mensaje del log -->
+            <!-- %n: salto de línea -->
+        </encoder>
+    </appender>
+
+    <!-- Configuración del logger raíz -->
+    <root level="INFO">
+        <!-- Referencia al appender STDOUT para enviar los logs a la consola -->
+        <appender-ref ref="STDOUT" />
+    </root>
+
+    <!-- Desactivar logging detallado de HikariCP -->
+    <logger name="com.zaxxer.hikari" level="INFO" />
+    <!-- Establece el nivel de logging para HikariCP en INFO para reducir la verbosidad -->
+    <!-- INFO: muestra mensajes de nivel INFO y superiores (WARN, ERROR) -->
+
+    <!-- Desactivar logging detallado de Hibernate -->
+    <logger name="org.hibernate.SQL" level="INFO" />
+    <!-- Establece el nivel de logging para las consultas SQL de Hibernate en INFO -->
+    <!-- INFO: muestra las consultas SQL ejecutadas por Hibernate -->
+
+    <logger name="org.hibernate.type.descriptor.sql.BasicBinder" level="WARN" />
+    <!-- Establece el nivel de logging para los valores bindeados en las consultas SQL en WARN -->
+    <!-- WARN: muestra solo mensajes de advertencia y superiores -->
+
+    <logger name="org.hibernate.tool.hbm2ddl" level="INFO" />
+    <!-- Establece el nivel de logging para la generación de esquemas de Hibernate en INFO -->
+    <!-- INFO: muestra mensajes de nivel INFO y superiores -->
+
+    <logger name="org.hibernate.engine.transaction.internal.TransactionImpl" level="INFO" />
+    <!-- Establece el nivel de logging para las transacciones de Hibernate en INFO -->
+    <!-- INFO: muestra mensajes de nivel INFO y superiores -->
+
+    <logger name="org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl" level="INFO" />
+    <!-- Establece el nivel de logging para el proveedor de conexiones JDBC de Hibernate en INFO -->
+    <!-- INFO: muestra mensajes de nivel INFO y superiores -->
+
+    <!-- Filtrar mensajes específicos de Hibernate -->
+    <logger name="org.hibernate.orm.connections.pooling" level="ERROR" />
+    <!-- Establece el nivel de logging para el pooling de conexiones de Hibernate en ERROR -->
+    <!-- ERROR: muestra solo mensajes de error y superiores -->
+
+    <logger name="o.h.e.t.j.p.i.JtaPlatformInitiator" level="ERROR" />
+    <!-- Establece el nivel de logging para la iniciación de la plataforma JTA en Hibernate en ERROR -->
+    <!-- ERROR: muestra solo mensajes de error y superiores -->
+</configuration>
